@@ -45,12 +45,12 @@ bot.on('message', message =>{
         if(message.member.roles.some(r=>["Fondateur", "Donateur", "Adminstrateur", "Graphiste", "Modérateur"].includes(r.name)) ) {
             var embed_pub_staff = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField(message.author.displayAvatarURL + "\n" + message.author.tag,"\nUn membre du staff à fait sa pub :" + "\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Rien.**")
+            .addField(message.author.avatarURL + "\n" + message.author.tag,"\nUn membre du staff à fait sa pub :" + "\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Rien.**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub_staff)
         }else{
             var embed_pub = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField(message.author.displayAvatarURL + "\n" + message.author.tag,"\nUn membre du discord à fait sa pub :" + "\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Suppression du message + Avertissement en privé .**")
+            .addField(message.author.avatarURL + "\n" + message.author.tag,"\nUn membre du discord à fait sa pub :" + "\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Suppression du message + Avertissement en privé .**")
             message.delete()
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub);
