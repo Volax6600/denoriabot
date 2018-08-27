@@ -45,12 +45,12 @@ bot.on('message', message =>{
         if(message.member.roles.some(r=>["Fondateur", "Donateur", "Adminstrateur", "Graphiste", "Modérateur"].includes(r.name)) ) {
             var embed_pub_staff = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField("Membre Staff Pub in Discord Channel :","►Joueur: " + message.author.name + "►Channel: " + message.channel.name)
+            .addField("Membre Staff Pub in Discord Channel :","►Joueur: " + message.author + "\n►Channel: " + message.channel.name)
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub_staff)
         }else{
             var embed_pub = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField("Membre Pub in Discord Channel :","►Joueur: " + message.author.name + "►Channel: " + message.channel.name)
+            .addField("Membre Pub in Discord Channel :","►Joueur: " + message.author + "\n►Channel: " + message.channel.name)
             message.delete()
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub);
