@@ -26,14 +26,14 @@ bot.on('message', message =>{
     if(message.content === prefix + "aide"){
         var embed_help = new Discord.RichEmbed()
         .setColor('#D9F200')
-        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.")
+        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n**..invite** : Donne le lien du discord.\n**..minecraft** : Donne des informations sur le serveur Minecraft.")
     message.channel.send(embed_help);
     }
 
     if(message.content === prefix){
         var embed_help = new Discord.RichEmbed()
         .setColor('#D9F200')
-        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.")
+        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n**..invite** : Donne le lien du discord.\n**..minecraft** : Donne des informations sur le serveur Minecraft.")
     message.channel.send(embed_help);
     }
 
