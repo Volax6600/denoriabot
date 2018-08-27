@@ -59,14 +59,14 @@ bot.on('message', message =>{
     else if(msg === prefix + "minecraft"){
         var embed_mc = new Discord.RichEmbed()
         .setColor('#0b7a75')
-        .addField("Informations sur Denoria:","**Ip**: " + minecraft_ip + "\n**Version**: " + minecraft_version + "\n**Crack**: " + minecraft_crack + "\n**But du Serveur**: " + minecraft_but)
+        .addField("Informations sur Denoria:","**Ip**: `" + minecraft_ip + "`\n**Version**: `" + minecraft_version + "`\n**Crack**: `" + minecraft_crack + "`\n**But du Serveur**: " + minecraft_but)
         message.channel.send(embed_mc);
     }
 
     else if(msg === prefix + "mc"){
         var embed_mc = new Discord.RichEmbed()
         .setColor('#0b7a75')
-        .addField("Informations sur Denoria:","**Ip**: " + minecraft_ip + "\n**Version**: " + minecraft_version + "\n**Crack**: " + minecraft_crack + "\n**But du Serveur**: " + minecraft_but)
+        .addField("Informations sur Denoria:","**Ip**: `" + minecraft_ip + "`\n**Version**: `" + minecraft_version + "`\n**Crack**: `" + minecraft_crack + "`\n**But du Serveur**: " + minecraft_but)
         message.channel.send(embed_mc);
     }
 
