@@ -62,7 +62,14 @@ bot.on('message', message =>{
         .addField("Informations sur Denoria:","**Ip**: `" + minecraft_ip + "`\n**Version**: `" + minecraft_version + "`\n**Crack**: `" + minecraft_crack + "`\n**But du Serveur**: " + minecraft_but)
         message.channel.send(embed_mc);
     }
-
+    else if(msg === prefix + "maj"){
+        if(message.member.id === "353578100992507904"){
+            essage.channel.sendMessage("Test on !")
+            
+    }else{
+        message.channel.sendMessage("Vous n'êtes pas la bonne personne !")
+    }
+}
     else if(msg === prefix + "mc"){
         var embed_mc = new Discord.RichEmbed()
         .setColor('#0b7a75')
