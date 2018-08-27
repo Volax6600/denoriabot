@@ -42,15 +42,15 @@ bot.on('message', message =>{
     }
 
     else if (message.content.includes('https://discord.gg/') || message.content.includes('discord.gg/') || message.content.includes('discord.me') || message.content.includes('discord.me/')) {
-        if(message.member.roles.some(r=>["Fondateur", "Donateur", "Adminstrateur", "Graphiste", "Modérateur"].includes(r.name)) ) {
+        if(message.member.roles.some(r=>["Fondateur", "Adminstrateur", "Graphiste", "Modérateur", "Modérateur-Test", "Helpeur"].includes(r.name)) ) {
             var embed_pub_staff = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField("Un membre du staff à fait sa pub :","\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Rien.**")
+            .addField("Un membre du staff à fait sa pub :","\n►Joueur: **" + message.author + "**\n►Id Joueur: **`" + message.author.id + "`**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **`" + message.channel.id + "`**\n►Action: **Rien.**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub_staff)
         }else{
             var embed_pub = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField("Un membre du discord à fait sa pub :","\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Suppression du message + Avertissement en privé .**")
+            .addField("Un membre du discord à fait sa pub :","\n►Joueur: **" + message.author + "**\n►Id Joueur: **`" + message.author.id + "`**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **`" + message.channel.id + "`**\n►Action: **Suppression du message + Avertissement en privé .**")
             message.delete()
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub);
