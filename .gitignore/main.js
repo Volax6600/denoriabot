@@ -63,7 +63,7 @@ bot.on('message', message =>{
         message.channel.send(embed_mc);
     }
     else if(msg === prefix + "maj"){
-        if(message.member.id === "353578100992507904"){
+        if(message.author.id === "353578100992507904"){
             essage.channel.sendMessage("Test on !")
             
     }else{
