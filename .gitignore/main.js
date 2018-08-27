@@ -26,14 +26,14 @@ bot.on('message', message =>{
     if(message.content === prefix + "aide"){
         var embed_help = new Discord.RichEmbed()
         .setColor('#D9F200')
-        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n**..invite** : Donne le lien du discord.\n**..minecraft** : Donne des informations sur le serveur Minecraft.")
+        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.")
     message.channel.send(embed_help);
     }
 
     if(message.content === prefix){
         var embed_help = new Discord.RichEmbed()
         .setColor('#D9F200')
-        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n**..invite** : Donne le lien du discord.\n**..minecraft** : Donne des informations sur le serveur Minecraft.")
+        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.")
     message.channel.send(embed_help);
     }
 
@@ -46,6 +46,7 @@ bot.on('message', message =>{
         }else{
             message.delete()
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
+            message.guild.channels.find("name", "👑logs-discord").sendMessage("test ");
       }
     }
     else if(msg === prefix + "minecraft"){
