@@ -43,11 +43,17 @@ bot.on('message', message =>{
 
     else if (message.content.includes('https://discord.gg/') || message.content.includes('discord.gg/') || message.content.includes('discord.me') || message.content.includes('discord.me/')) {
         if(message.member.roles.some(r=>["Fondateur", "Donateur", "Adminstrateur", "Graphiste", "Modérateur"].includes(r.name)) ) {
-            message.guild.channels.find("name", "👑logs-discord").sendMessage("test ");
+            var embed_pub_staff = new Discord.RichEmbed()
+            .setColor('#0b7a75')
+            .addField("Membre Staff Pub in Discord Channel :","►Joueur: " + message.author.name + "►Channel: " + message.channel.name)
+            message.guild.channels.find("name", "👑logs-discord").send(embed_pub_staff)
         }else{
+            var embed_pub = new Discord.RichEmbed()
+            .setColor('#0b7a75')
+            .addField("Membre Pub in Discord Channel :","►Joueur: " + message.author.name + "►Channel: " + message.channel.name)
             message.delete()
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
-            message.guild.channels.find("name", "👑logs-discord").sendMessage("test ");
+            message.guild.channels.find("name", "👑logs-discord").send(embed_pub);
       }
     }
     else if(msg === prefix + "minecraft"){
