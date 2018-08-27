@@ -43,6 +43,7 @@ bot.on('message', message =>{
 
     else if (message.content.includes('https://discord.gg/') || message.content.includes('discord.gg/') || message.content.includes('discord.me') || message.content.includes('discord.me/')) {
         if(message.member.roles.some(r=>["Fondateur", "Donateur", "Adminstrateur", "Graphiste", "Modérateur"].includes(r.name)) ) {
+            message.guild.channels.find("name", "👑logs-discord").sendMessage("test ");
         }else{
             message.delete()
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
