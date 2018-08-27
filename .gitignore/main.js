@@ -26,14 +26,14 @@ bot.on('message', message =>{
     if(message.content === prefix + "aide"){
         var embed_help = new Discord.RichEmbed()
         .setColor('#D9F200')
-        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.")
+        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.\n **..staff** : Affiche tout le staff de Denoria.")
     message.channel.send(embed_help);
     }
 
     if(message.content === prefix){
         var embed_help = new Discord.RichEmbed()
         .setColor('#D9F200')
-        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.")
+        .addField("Commandes du Denoria Bot!","   **..aide** : Affiche les commandes du bot.\n **..invite** : Donne le lien du discord.\n **..minecraft** : Donne des informations sur le serveur Minecraft.\n **..staff** : Affiche tout le staff de Denoria.")
     message.channel.send(embed_help);
     }
 
@@ -55,6 +55,13 @@ bot.on('message', message =>{
             message.author.send("**Les liens vers d'autre serveurs discord sont interdit!**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub);
       }
+    }
+    else if(msg === prefix + "staff"){
+        var embed_staff = new Discord.RichEmbed()
+        .setColor('#0b7a75')
+        .addField("Le staff de Denoria est composé de:"," **Fondateurs**:\nCalvineries et UgoGame\n**Modérateur**:\nVolax6600\n**Helpeur**:\nLilian142700")
+        .setFooter("Actualisation du bot entre 1 heure et 1 jour.")
+        message.channel.send(embed_staff);
     }
     else if(msg === prefix + "minecraft"){
         var embed_mc = new Discord.RichEmbed()
