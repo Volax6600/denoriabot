@@ -45,7 +45,7 @@ bot.on('message', message =>{
         if(message.member.roles.some(r=>["Fondateur", "Donateur", "Adminstrateur", "Graphiste", "Modérateur"].includes(r.name)) ) {
             var embed_pub_staff = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField(message.author.avatar + " " + message.author.username,"Un membre du staff à fait sa pub :" + "►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Rien.**")
+            .addField(message.author.avatarURL + " " + message.author.username + message.author.tag,"Un membre du staff à fait sa pub :" + "\n►Joueur: **" + message.author + "**\n►Id Joueur: **" + message.author.id + "**\n►Channel: **" + message.channel.name + "**\n►Id Channel: **" + message.channel.id + "**\n►Action: **Rien.**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub_staff)
         }else{
             var embed_pub = new Discord.RichEmbed()
