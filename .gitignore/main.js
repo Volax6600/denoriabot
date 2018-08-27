@@ -45,12 +45,12 @@ bot.on('message', message =>{
         if(message.member.roles.some(r=>["Fondateur", "Adminstrateur", "Graphiste", "Modérateur", "Modérateur-Test", "Helpeur"].includes(r.name)) ) {
             var embed_pub_staff = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField(":warning: Un membre du staff à fait sa pub :","\n►Joueur: **" + message.author + "**\n►Id Joueur: **`" + message.author.id + "`**\n►Message: `" + message.content + "`\n►Channel: **`" + message.channel.name + "`**\n►Action: **`Rien`**")
+            .addField(":warning: Un membre du staff à fait sa pub : :warning:","\n►Joueur: **" + message.author + "**\n►Id Joueur: **`" + message.author.id + "`**\n►Message: `" + message.content + "`\n►Channel: **`" + message.channel.name + "`**\n►Action: **`Rien`**")
             message.guild.channels.find("name", "👑logs-discord").send(embed_pub_staff)
         }else{
             var embed_pub = new Discord.RichEmbed()
             .setColor('#0b7a75')
-            .addField(":warning: Un membre du discord à fait sa pub :","\n►Joueur: **" + message.author + "**\n►Id Joueur: **`" + message.author.id + "`**\n►Message: `" + message.content + "`\n►Channel: **`" + message.channel.name + "`**\n►Action: **`Suppression du message + Avertissement en privé `**")
+            .addField(":warning: Un membre du discord à fait sa pub : :warning:","\n►Joueur: **" + message.author + "**\n►Id Joueur: **`" + message.author.id + "`**\n►Message: `" + message.content + "`\n►Channel: **`" + message.channel.name + "`**\n►Action: **`Suppression du message + Avertissement en privé `**")
             var embed_warn = new Discord.RichEmbed()
             .setColor('#0b7a75')
             .addField(":warning: Avertissement:","**Il est interdit de vers de la pub pour d'autres serveurs discord !**")
